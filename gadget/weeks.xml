@@ -186,7 +186,7 @@ function getMonthHtml(out, y, m, opt_weeks) {
   out.push('<table class="month" border=0 cellspacing=0>',
       '<tr><td colspan=7 title="',
       SHOW_MONTH, '" class="monthHeader clickable" ',
-      'onclick="showDate(', y, ',', m+1, ')">', MONTH_NAMES[m], ' ', y,
+      'onclick="showDate(', y, ',', m+1, ')">', y, ' / ', MONTH_NAMES[m],
       '<tr>');
 
   for(var i = 0; i < DOW.length; ++i) {
