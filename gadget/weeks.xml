@@ -211,7 +211,7 @@ function getMonthHtml(out, y, m, opt_weeks) {
     }
     if (dow == 0) {
       out.push('<tr>');
-      out.push('<td class="normal weeknum">', getWeekNumber(new Date(y, m, d)), '</td>');
+      out.push('<td class="normal weeknum">', getWeekNumber(new Date(y, m, d))[1], '</td>');
       ++weeks;
     }
     out.push('<td class="');
