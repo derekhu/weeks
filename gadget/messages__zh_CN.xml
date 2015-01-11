@@ -1,0 +1,27 @@
+<messagebundle>
+<msg name="Labs_Gadget_Year_View_Title">我的年视图</msg>
+<msg name="Labs_Gadget_Year_View_Description">浏览全年日程。</msg>
+<msg name="Labs_Gadget_Year_View_Button">显示年视图</msg>
+<msg name="January">1 月</msg>
+<msg name="February">2 月</msg>
+<msg name="March">3 月</msg>
+<msg name="April">4 月</msg>
+<msg name="May">5 月</msg>
+<msg name="June">6 月</msg>
+<msg name="July">7 月</msg>
+<msg name="August">8 月</msg>
+<msg name="September">9 月</msg>
+<msg name="October">10 月</msg>
+<msg name="November">11 月</msg>
+<msg name="December">12 月</msg>
+<msg name="Labs_Gadget_Month_View_Tooltip">点击可显示本月日程</msg>
+<msg name="Short_Sunday">周日</msg>
+<msg name="Short_Monday">周一</msg>
+<msg name="Short_Tuesday">周二</msg>
+<msg name="Short_Wednesday">周三</msg>
+<msg name="Short_Thursday">周四</msg>
+<msg name="Short_Friday">周五</msg>
+<msg name="Short_Saturday">周六</msg>
+<msg name="Labs_This_Year_Button">今年</msg>
+<msg name="Labs_Go_To_Year">转至</msg>
+</messagebundle>
