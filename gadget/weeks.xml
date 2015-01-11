@@ -34,8 +34,8 @@ function goToCanvas() {
   gadgets.views.requestNavigateTo('canvas', {'year': year});
   return false;
 };
-
 </script>
+
 <form style="display:block; text-align:center; margin:0; padding:0" onsubmit="return goToCanvas();">
   <input maxlength="4" id="year" value="2009" style="width: 4em; margin:2px 0">
   <input type=submit value="__MSG_Labs_Go_To_Year__">
@@ -76,10 +76,10 @@ var MONTH_NAMES = ["__MSG_January__", "__MSG_February__", "__MSG_March__",
     "__MSG_November__", "__MSG_December__"];
 
 /** The VERY short names of the months to use as headings */
-var DOW = ["__MSG_Short_Sunday__", "__MSG_Short_Monday__",
+var DOW = ["__MSG_Short_Monday__",
     "__MSG_Short_Tuesday__", "__MSG_Short_Wednesday__",
     "__MSG_Short_Thursday__", "__MSG_Short_Friday__",
-    "__MSG_Short_Saturday__"];
+    "__MSG_Short_Saturday__", "__MSG_Short_Sunday__"];
 
 /** The lengths of the months */
 var DAYS_IN_MONTH = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
@@ -196,7 +196,7 @@ function getMonthHtml(out, y, m, opt_weeks) {
   var weeks = 0;
   var minWeeks = opt_weeks || Math.ceil(daysInMonth / 7);
 
-  for(var d = 1 - firstDayOfMonth; 1; ++d) {
+  for(var d = 2 - firstDayOfMonth; 1; ++d) {
     var dow = i++ % 7;
 
     if (minWeeks <= weeks && dow == 0) {
@@ -211,7 +211,7 @@ function getMonthHtml(out, y, m, opt_weeks) {
     if (y == todayYear && m == todayMonth && d == todayDate){
       c = 'today';
     }
-    if ((d <= daysInMonth) && ((dow == 0) || (dow == 6))){
+    if ((d <= daysInMonth) && ((dow == 5) || (dow == 6))){
       c = 'weekend ';
     }
     out.push(c);
