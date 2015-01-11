@@ -153,6 +153,9 @@ function display(delta) {
 function getWeeksInMonth(y, m) {
   var firstDate = new Date(y, m, 1);
   var firstDayOfMonth = firstDate.getDay();
+  if( firstDayOfMonth == 0){
+    firstDayOfMonth = 7;
+  }
   var daysInMonth = getDaysInMonth(firstDate);
 
   return Math.ceil((firstDayOfMonth + daysInMonth) / 7)
@@ -191,6 +194,9 @@ function getMonthHtml(out, y, m, opt_weeks) {
   }
   var firstDate = new Date(y, m, 1);
   var firstDayOfMonth = firstDate.getDay();
+  if( firstDayOfMonth == 0){
+    firstDayOfMonth = 7;
+  }
   var daysInMonth = getDaysInMonth(firstDate);
   var i = 0;
   var weeks = 0;
