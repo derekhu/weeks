@@ -215,12 +215,12 @@ function getMonthHtml(out, y, m, opt_weeks) {
       ++weeks;
     }
     out.push('<td class="');
-    var c = 'normal';
-    if (y == todayYear && m == todayMonth && d == todayDate){
-      c = 'today';
-    }
+    var c = 'normal ';
     if ((d <= daysInMonth) && ((dow == 5) || (dow == 6))){
       c = 'weekend ';
+    }
+    if (y == todayYear && m == todayMonth && d == todayDate){
+      c += 'today';
     }
     out.push(c);
 
