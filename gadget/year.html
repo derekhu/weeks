@@ -11,7 +11,7 @@
 <button onmousedown="display(1)">&nbsp;&raquo;&nbsp;</button>&nbsp;
 <input type=submit value="__MSG_Labs_Go_To_Year__"
     onmousedown="display(0)">&nbsp;
-<button onmousedown="displayCurrentYear()">__MSG_Labs_This_Year_Button__
+<button id="thisYear" onmousedown="displayCurrentYear()">__MSG_Labs_This_Year_Button__
 </button></form>
 
 <div id=calDiv></div>
@@ -39,6 +39,8 @@ var SHOW_MONTH = "__MSG_Labs_Gadget_Month_View_Tooltip__";
 if(!window.gadgets){
 	 MONTH_NAMES = ["1 月", "2 月", "3 月", "4 月", "5 月", "6 月", "7 月", "8 月", "9 月", "10 月", "11 月", "12 月"];
 	 DOW = ["周一", "周二", "周用", "周四", "周五", "周六", "周日"];
+	 document.querySelector("input[value=__MSG_Labs_Go_To_Year__]").value = "转至";
+	 document.querySelector("#thisYear").innerText = "今年";
 }
 
 /**
