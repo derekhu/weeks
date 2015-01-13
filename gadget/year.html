@@ -166,15 +166,7 @@ function getMonthHtml(out, y, m, opt_weeks) {
     if (minWeeks <= weeks && dow == 0) {
       break;
     }
-    if (dow == 0) {
-      // Add empty padding row.
-      out.push('<tr>');
-      for(var p = 0; p < 8; ++p){
-         out.push('<td class="normal">&nbsp;</td>');
-      }
-      out.push('</tr>');
-      
-      // Add new row for days.
+    if (dow == 0) {     
       out.push('<tr>');
       out.push('<td class="normal weeknum">');
       if(d <= daysInMonth){
@@ -200,6 +192,15 @@ function getMonthHtml(out, y, m, opt_weeks) {
           ')">', d);
     } else {
       out.push('">&nbsp;');
+    }
+    
+    // Add empty padding row.
+    if(dow == 6){
+      out.push('<tr>');
+      for(var p = 0; p < 8; ++p){
+         out.push('<td class="normal">&nbsp;</td>');
+      }
+      out.push('</tr>');
     }
   }
   out.push('</table>');
