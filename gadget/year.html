@@ -32,6 +32,12 @@ var DAYS_IN_MONTH = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
 var SHOW_MONTH = "__MSG_Labs_Gadget_Month_View_Tooltip__";
 
+/** Run outside Google Calendar Gadgets Container. */
+if(!window.gadgets){
+	 MONTH_NAMES = ["1 月", "2 月", "3 月", "4 月", "5 月", "6 月", "7 月", "8 月", "9 月", "10 月", "11 月", "12 月"];
+	 DOW = ["周一", "周二", "周用", "周四", "周五", "周六", "周日"];
+}
+
 /**
  * Given a date, check if it is a leap year.
  * @param {Date} date The date in question.
@@ -286,11 +292,11 @@ function getStyles() {
 
 document.write(getStyles());
 
-var tentativeYear = gadgets.views.getParams()['year'];
+var tentativeYear = window.gadgets && gadgets.views.getParams()['year'];
 displayCurrentYear(tentativeYear);
 
 // This is here to make it look nicer for gmail
-gadgets.window.adjustHeight(600);
+window.gadgets && gadgets.window.adjustHeight(600);
 </script>
 
 </body>
