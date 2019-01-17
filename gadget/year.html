@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<title>Year</title>
 </head>
 <body>
 
@@ -227,6 +228,7 @@ function showYear(y) {
   }
   out.push('</table>');
   document.getElementById('calDiv').innerHTML = out.join('');
+  document.title = y;
 }
 
 /* 
