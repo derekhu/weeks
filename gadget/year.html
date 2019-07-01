@@ -116,7 +116,7 @@ function getWeeksInMonth(y, m) {
   }
   var daysInMonth = getDaysInMonth(firstDate);
 
-  return Math.ceil((firstDayOfMonth + daysInMonth) / 7)
+  return Math.ceil((firstDayOfMonth -1+ daysInMonth) / 7)
 }
 
 /**
